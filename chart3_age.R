@@ -31,8 +31,8 @@ create_ageism_plot <- function(year) {
          y = "Average Unemployment Rate",
          fill = "Age Category") +
     theme_minimal() +
-    theme(legend.position = "none") +
-    geom_text(aes(label = round(avg_unemployment_rate, 2)), vjust = -0.5)  # Add text labels on bars
+    theme(legend.position = "none")
+    geom_text(aes(label = round(avg_unemployment_rate, 2)), vjust = -0.5)
   
   return(us_avg_year_graph)
 }

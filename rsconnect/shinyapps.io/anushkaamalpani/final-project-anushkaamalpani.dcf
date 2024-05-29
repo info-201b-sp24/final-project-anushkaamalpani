@@ -5,6 +5,9 @@ account: anushkaamalpani
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 12048279
-bundleId: 8645545
+bundleId: 8671983
 url: https://anushkaamalpani.shinyapps.io/final-project-anushkaamalpani/
 version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: README.md

@@ -11,8 +11,8 @@ server <- function(input, output) {
     create_ageism_plot(input$year_ageism)
   })
   
-  output$ageplot <- renderPlot({
-    ageism_plot()
+  output$ageplot <- renderPlotly({
+    ggplotly({ageism_plot()})
   })
   
   unemployment_plot <- reactive({
