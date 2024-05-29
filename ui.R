@@ -1,7 +1,6 @@
 library(shiny)
 
-source("chart2_tropics.R")
-source("chart3_age.R")
+source("charts.R")
 
 # Define a range of years for selection
 years <- 2014:2024
@@ -11,12 +10,11 @@ ui <- navbarPage("Global Unemployment Trends",
                  tabPanel("Introduction",
                           mainPanel(
                             fluidRow(
-                              #align = "center",
                               h2("Introduction"),
-                              p("Unemployment is a situation wherein a person, who is actively looking for a job, is unable to find work. The unemployment rate is defined as the number of people without work, represented as a percentage of the labor force. It serves as an indicator of the health of the economy."), tags$img(src = "https://www.financialexpress.com/wp-content/uploads/2024/02/unemployment.jpg?w=1024", alt = "Unemployment rates by state in India (February 2024)", width = "500px"), 
+                              p("Unemployment is a situation wherein a person, who is actively looking for a job, is unable to find work. The unemployment rate is defined as the number of people without work, represented as a percentage of the labor force. It serves as an indicator of the health of the economy."), tags$img(src = "https://laboriq.co/hs-fs/hubfs/Shutterstock_336372527.png?width=600&height=397&name=Shutterstock_336372527.png", alt = "Unemployment", width = "300px", style = "display: block; margin-left: auto; margin-right: auto;"), 
                               p("Analyzing unemployment rates throughout the years in different countries is crucial for understanding economic fluctuations during different periods. This analysis aims to address several key questions:"),
                               tags$ul(
-                                tags$li("To what extent was the employment rate between sexes affected by Covid-19 in various countries?"),
+                                tags$li("To what extent was the employment rate between sexes affected by Covid-19 in multiple countries?"),
                                 tags$li("Is there a relationship between tropic zones and unemployment rates?"),
                                 tags$li("How does the unemployment rate of different age groups differ between 2014 to 2024 in the United States?")
                               ),
@@ -41,11 +39,15 @@ ui <- navbarPage("Global Unemployment Trends",
                  tabPanel("Impact of Covid",
                           sidebarLayout(
                             sidebarPanel(
-                              h3("Impact of Covid"),
-                              p("Select a year to see the data."),
-                            ),
+                              h3("Unemployment Rates between Male and Females in Different Countries"),
+                              selectInput(inputId = "country",
+                                          label = "Select a country:",
+                                          choices = c("Canada", "United States", "Brazil", "India"),
+                                          selected = tail(years, 1)
+                              ),
+                              p("This chart analyzes the unemployment rate between males and females in 4 different countries over the years of 2017 to 2022. These countries include Canada, The United States, Brazil and India. We chose a graph with 2 lines to compare the male and female trends because it is visually easier to compare the rates. Users are able to view the rates in different countries by using the dropdown menu. ")),
                             mainPanel(
-                  
+                              plotlyOutput(outputId = "covidplot")
                             )
                           )
                  ),

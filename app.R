@@ -1,8 +1,6 @@
 library(shiny)
 library(plotly)
-
-source("chart2_tropics.R")
-source("chart3_age.R")
+source("charts.R")
 source("ui.R")
 source("server.R")
 

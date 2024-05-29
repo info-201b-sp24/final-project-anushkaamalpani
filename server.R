@@ -2,8 +2,7 @@ library(shiny)
 library(plotly)
 library(ggiraph)
 
-source("chart2_tropics.R")
-source("chart3_age.R")
+source("charts.R")
 
 server <- function(input, output) {
   
@@ -13,6 +12,14 @@ server <- function(input, output) {
   
   output$ageplot <- renderPlotly({
     ggplotly({ageism_plot()})
+  })
+  
+  covid_plot <- reactive({
+    plot_unemployment_rate(input$country)
+  })
+  
+  output$covidplot <- renderPlotly({
+    ggplotly({covid_plot()})
   })
   
   unemployment_plot <- reactive({
