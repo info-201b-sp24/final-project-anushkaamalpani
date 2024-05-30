@@ -34,7 +34,12 @@ How does the unemployment rate of different age groups differ between 2014 to 20
   
 ##Dataset Information  
 
-This data is sourced from Kaggle – Global Unemployment dataset and was tabulated from the data collected by the ILO. It is updated and posted on Kaggle by Sazidul Islam to measure changes in employment across 189 countries/regions over 11 years.   
+This data is sourced from Kaggle – Global Unemployment dataset and was tabulated from the data collected by the ILO. It is updated and posted on Kaggle by Sazidul Islam to measure changes in employment across 189 countries/regions over 11 years.     
+
+**Observations (rows)**: 1,135
+   
+   
+**Features (columns)**: 16
 
 ##Limitations/Problems  
 

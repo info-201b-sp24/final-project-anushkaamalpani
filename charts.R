@@ -12,7 +12,7 @@ library(ggiraph)
 library(plotly)
 
 
-data <- read.csv("https://raw.githubusercontent.com/info-201b-sp24/final-project-anushkaamalpani/main/data.csv")
+data <- read.csv("https://raw.githubusercontent.com/info-201b-sp24/exploratory-analysis-anushkaamalpani/main/data.csv")
 
 #chart1_covid
 

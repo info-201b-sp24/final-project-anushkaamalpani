@@ -22,6 +22,10 @@ ui <- navbarPage("Global Unemployment Trends",
                               
                               h3("Dataset Information"),
                               p("This data is sourced from Kaggle – Global Unemployment dataset and was tabulated from the data collected by the ILO. It is updated and posted on Kaggle by Sazidul Islam to measure changes in employment across 189 countries/regions over 11 years."),
+                              p("1135 Observations/Rows and 16 Columns"),
+                              p("Download the dataset:"),
+                              tags$a(href = "https://www.kaggle.com/datasets/sazidthe1/global-unemployment-data?select=global_unemployment_data.csv", 
+                                     "Kaggle Dataset", target = "_blank"),
                               
                               h3("Limitations/Problems"),
                               p("There are a few limitations that we should consider when working with this data set:"),
@@ -31,6 +35,12 @@ ui <- navbarPage("Global Unemployment Trends",
                                 tags$li("Fluctuations within unemployment rates over a shorter period are not visible in this dataset. Relying entirely on yearly averages can hide important trends and variations that occur throughout the year."),
                                 tags$li("Jobs with seasonal fluctuations, weather cycles, and economic cycles can affect employment rates on a monthly basis. These fluctuations are not shown and are ignored in this dataset, making the data less specific."),
                                 tags$li("The process of copying data from the ILO LFS database and then sourcing it to present on Kaggle can lead to loss of detail or granularity in the dataset. There may have been reformatting of the data by the author of the dataset which may have unintentionally led to loss of important data.")
+                              ),
+                              h3("Ethical Questions"),
+                              tags$ul(
+                              tags$li("Is there transparency in the method of collection of these data points?"),
+                              tags$li("Due to the large time frame of the data, how do we ensure the same or similar data collection strategies were used throughout?"),
+                              tags$li("Additionally, as the data was collected over the course of several decades, it is safe to assume that different lead researchers were employed in data collection. Such variation in principal investigators could lead to bias snowballs and bias cascades, as the different prejudices of each researcher could’ve aggregated over the years, affecting the quality of the data. As such, how do we ensure all potential biases are declared and accounted for?")
                               )
                             ), width = 12
                           )
@@ -92,12 +102,13 @@ ui <- navbarPage("Global Unemployment Trends",
                           mainPanel(
                             fluidRow(
                               h2("Conclusion"),
-                              p("After analyzing this data set, we have 3 major takeaways:"),
+                              h4("Analysis:"),
                               tags$ul(
-                                tags$li("After analyzing this data set, we have 3 major takeaways. From our first chart, we were able to see that the unemployment rate for both male and females went through similar fluctuations overtime even though the male unemployment rate was always higher than the female. The biggest spike in the unemployment rate across each country analyzed, (Canada, United States, Brazil and India) is over the years of 2019-2021 during the COVID-19 pandemic. These findings have important implications for our economy. The significant rise in unemployment during the COVID-19 pandemic highlights the labor market to global disruptions. This chunk of high unemployment may have long-term effects on economic stability and growth. Additionally, being able to understand the impacts on male and female employment can guide more equitable economic recovery strategies in the future"),
+                                tags$li("After analyzing this data set, we have 3 major takeaways. From our first chart, we were able to see that the unemployment rate for both male and females went through similar fluctuations overtime even though the male unemployment rate were mostly higher than the female. The biggest spike in the unemployment rate across each country analyzed, (Canada, United States, Brazil and India) is over the years of 2019-2021 during the COVID-19 pandemic. These findings have important implications for our economy. The significant rise in unemployment during the COVID-19 pandemic highlights the labor market to global disruptions. This chunk of high unemployment may have long-term effects on economic stability and growth. Additionally, being able to understand the impacts on male and female employment can guide more equitable economic recovery strategies in the future"),
                                 tags$li("From our second chart, we can see that the highest unemployment rates are located in South Africa, North Africa, and Eastern Europe. More specifically, some of the highest unemployment rates are located close to where the tropic lines are, at 23.43612° North and South but only in the continents of Africa and Europe. These findings suggest that while geographic and climatic factors might influence unemployment rates, it is not a strong relationship as otherwise the trend would be visible in the Americas and Asia. Regardless, regions near the tropic lines may face challenges that contribute to higher unemployment, such as economic instability, or limited access to resources. Understanding these disparities is crucial for developing targeted economic policies. 
 "),
                                 tags$li("Lastly for our third chart we compared the average unemployment rate among the age categories of Children (less than 15 years), Youth (15 years to 24 years), and Adults (25+ years). Through our analysis, It is evident that the youth face the highest unemployment, followed by 'Children' and 'Adults,' it suggests that young people entering the job market out of college or even high school face the most challenges, whereas older adults have relatively stable employment. The impact of COVID-19 is also evident through this analysis where we see the unemployment rates across all age categories are highest in 2020. As time passes, the charts also show a decreasing unemployment rate for all age categories. This can help policymakers identify and design economic strategies favoring their employment. Over here in the US, they can introduce policies that focus on job training programs or educational initiatives for young people. This graph also gives us insight that children under the age of 15 facing unemployment may not be in school studying. This could indicate issues such as child labor or lack of access to education, which brings out the issue of children not receiving proper education and being part of the labor force.")
+                              
                               )
                             ), width = 12
                           )
