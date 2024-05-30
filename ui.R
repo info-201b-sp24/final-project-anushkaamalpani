@@ -22,7 +22,7 @@ ui <- navbarPage("Global Unemployment Trends",
                               
                               h3("Dataset Information"),
                               p("This data is sourced from Kaggle – Global Unemployment dataset and was tabulated from the data collected by the ILO. It is updated and posted on Kaggle by Sazidul Islam to measure changes in employment across 189 countries/regions over 11 years."),
-                              p("1135 Observations/Rows and 16 Columns"),
+                              p("The dataset has 1135 Observations/Rows and 16 Columns"),
                               p("Download the dataset:"),
                               tags$a(href = "https://www.kaggle.com/datasets/sazidthe1/global-unemployment-data?select=global_unemployment_data.csv", 
                                      "Kaggle Dataset", target = "_blank"),
@@ -109,7 +109,9 @@ ui <- navbarPage("Global Unemployment Trends",
 "),
                                 tags$li("Lastly for our third chart we compared the average unemployment rate among the age categories of Children (less than 15 years), Youth (15 years to 24 years), and Adults (25+ years). Through our analysis, It is evident that the youth face the highest unemployment, followed by 'Children' and 'Adults,' it suggests that young people entering the job market out of college or even high school face the most challenges, whereas older adults have relatively stable employment. The impact of COVID-19 is also evident through this analysis where we see the unemployment rates across all age categories are highest in 2020. As time passes, the charts also show a decreasing unemployment rate for all age categories. This can help policymakers identify and design economic strategies favoring their employment. Over here in the US, they can introduce policies that focus on job training programs or educational initiatives for young people. This graph also gives us insight that children under the age of 15 facing unemployment may not be in school studying. This could indicate issues such as child labor or lack of access to education, which brings out the issue of children not receiving proper education and being part of the labor force.")
                               
-                              )
+                              ),
+                              p("Overall, I would say the most important takeaway from this analysis is that unemployment rates are extremely complex, and it is not possible to break its factors down; a better approach would be a holistic approach that considers the context of the data and other, non-numeric values. "),
+                              p("The broader implications of this insight is that unemployment rates in general cannot be trusted as an overall indicator of the health of the economy, as there are too many factors that could affect unemployment rate but not affect the economy as a whole. However, this can be applied to a variety of scenarios– different data sources should be used together to create a bigger picture, and individual analyses should not be seen as representative of the big picture.")
                             ), width = 12
                           )
                  ),
